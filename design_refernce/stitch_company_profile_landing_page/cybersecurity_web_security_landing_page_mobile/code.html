@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#111317;color:#e2e2e6;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-surface": "#e2e2e6", "surface-bright": "#37393d", "on-primary-fixed": "#002022", "tertiary-container": "#d9dbdf", "secondary": "#4edea3", "on-primary-container": "#006a70", "primary-container": "#00f2fe", "inverse-primary": "#00696f", "background": "#111317", "tertiary-fixed": "#e0e2e6", "surface-container-highest": "#333538", "secondary-fixed-dim": "#4edea3", "on-background": "#e2e2e6", "on-error-container": "#ffdad6", "surface-container-high": "#282a2d", "error": "#ffb4ab", "on-error": "#690005", "secondary-fixed": "#6ffbbe", "on-tertiary": "#2d3134", "surface-tint": "#00dce6", "on-tertiary-fixed-variant": "#44474a", "surface-variant": "#333538", "primary-fixed": "#6ff6ff", "outline-variant": "#3a494b", "error-container": "#93000a", "on-surface-variant": "#b9cacb", "surface-dim": "#111317", "on-tertiary-fixed": "#191c1f", "surface": "#111317", "on-primary-fixed-variant": "#004f53", "on-tertiary-container": "#5d6063", "secondary-container": "#00a572", "on-primary": "#00373a", "surface-container-lowest": "#0c0e11", "primary": "#e0fdff", "surface-container-low": "#1a1c1f", "tertiary": "#f6f7fc", "on-secondary": "#003824", "outline": "#849495", "on-secondary-container": "#00311f", "tertiary-fixed-dim": "#c4c7ca", "on-surface": "#e2e2e6", "inverse-on-surface": "#2f3034", "primary-fixed-dim": "#00dce6", "on-secondary-fixed": "#002113", "on-secondary-fixed-variant": "#005236", "surface-container": "#1e2023" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "margin": "1.25rem", "space-md": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "margin-tablet": "2.5rem", "gutter-desktop": "2rem", "margin-desktop": "4rem", "space-xs": "0.25rem", "gutter": "1.5rem" }, fontFamily: { "body-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-telemetry": ["JetBrains Mono"], "label-badge": ["Inter"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "body-sm": ["Inter"] }, fontSize: { "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600"}], "display-hero-mobile": ["38px", {"lineHeight": "46px", "letterSpacing": "-0.025em", "fontWeight": "800"}], "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400"}], "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600"}], "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "700"}], "label-telemetry": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}], "label-badge": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600"}], "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "display-hero": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.03em", "fontWeight": "800"}], "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="CyberSecurity Wordmark Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPoPOzBUItVywIAhrDdpluPtQFGHm32ONXfu8K-cDI-LcAaqzIwFcH6fmWUU_R7ZYh-6hpyQIqpffYoJhYAWr9Hezl9DuORgkWH63XmYFYlc2E-A9Z5hLkyLqHW04ptDLxIIs1ESJHCMKsxLfxY6z8gBz05AaJJVyJji0OxH4oZy-DvAEIzl4eSYQzKELrvqKw0aQGqOAn5p8h0I5F5pHt7igfUV51A4iOhRqhtldz"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none tracking-tight">SENTINEL</span><span class="font-label-telemetry text-label-telemetry text-secondary leading-none uppercase mt-space-xs">SYS.ACTIVE</span></div></div><div class="flex items-center gap-space-sm"><button aria-label="Emergency Contact" class="w-11 h-11 flex items-center justify-center bg-surface-container-high rounded text-primary-container hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">emergency</span></button><button aria-label="Open Navigation Menu" class="w-11 h-11 flex items-center justify-center bg-surface-container-high rounded text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">menu</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full text-on-surface">
+<!-- Real-Time Telemetry Bar -->
+<section class="w-full bg-surface-container-lowest px-margin py-space-xs flex items-center justify-between border-none">
+<div class="flex items-center gap-space-xs">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase tracking-widest">DEFCON 1 // SOC LIVE</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px] text-primary-container">shield_with_heart</span>
+<span class="font-label-telemetry text-label-telemetry text-primary-container font-bold">1.48M+ ANCAMAN DITANGKAL</span>
+</div>
+</section>
+<!-- Hero Section -->
+<section class="w-full px-margin pt-space-lg pb-space-xl flex flex-col gap-space-lg bg-surface">
+<div class="flex flex-col gap-space-sm">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded-full self-start">
+<span class="material-symbols-outlined text-[14px] text-primary-container">verified</span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface uppercase tracking-wider">Enterprise Web Security 2025</span>
+</div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-primary tracking-tight font-extrabold leading-tight">
+        Benteng Keamanan Web Terdepan untuk Aplikasi Digital Anda
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Perlindungan menyeluruh terhadap eksploitasi zero-day, serangan DDoS terdistribusi, dan kebocoran data dengan mitigasi SOC militer siaga 24/7.
+      </p>
+</div>
+<!-- Hero Actions -->
+<div class="flex flex-col gap-space-sm w-full">
+<a class="w-full h-12 flex items-center justify-center gap-space-xs bg-primary-container text-on-primary-container font-headline-sm text-headline-sm rounded-lg shadow-md active:scale-[0.98] transition-all" href="#audit-form">
+<span class="material-symbols-outlined text-[20px]">security_update_good</span>
+<span class="text-sm font-bold tracking-wide">Mulai Audit Keamanan</span>
+</a>
+<a class="w-full h-12 flex items-center justify-center gap-space-xs bg-surface-container-high text-on-surface font-headline-sm text-headline-sm rounded-lg active:scale-[0.98] transition-all" href="tel:+622150820900">
+<span class="material-symbols-outlined text-[20px] text-error">phone_in_talk</span>
+<span class="text-sm font-semibold tracking-wide">Hotline Insiden 24 Jam</span>
+</a>
+</div>
+<!-- Visual War-Room Feed Card -->
+<div class="relative w-full rounded-xl overflow-hidden bg-surface-container-lowest shadow-xl">
+<div class="relative w-full h-60 overflow-hidden">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Wide perspective inside a high-tech modern cybersecurity military operations center SOC command room at night with multiple operators monitoring giant blue luminescent digital world maps and network traffic telemetry screens in cinematic dark contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd8UFlq_lJOjJ7Wat-ZyUL-qScDuWcVsz2EzGAYJqUMhlsILO3RSWcS5nKCfhhmUppH64_BBA4K4Xe1HxOuTH5iFY28kND1PrPbtkX28e3_WMGKY_1ApgsUy-LaM9q71-2cN_vEqTqAswcjZPO-YRsFWJNw9zMzuNAwo8Te88zsAy1Hwnt9JNVNNqCDgXdmGmftsALT4IL2NtG-3s40PE3uGZzptzvRTWeuZRFH9oZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/40 to-transparent"></div>
+</div>
+<!-- Overlay Floating Telemetry Badges -->
+<div class="absolute top-space-sm left-space-sm right-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-highest/90 backdrop-blur-md rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-telemetry text-label-telemetry text-secondary uppercase font-semibold">JAKARTA SOC-01</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-highest/90 backdrop-blur-md rounded">
+<span class="material-symbols-outlined text-primary-container text-[14px]">speed</span>
+<span class="font-label-telemetry text-label-telemetry text-primary-container font-semibold">&lt; 5 Mnt Respon</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">99.99% Terlindungi</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">24/7/365 AKTIF</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[99.99%]"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Pusat kendali pertahanan siber multi-lapis mengawasi ratusan aset web perbankan dan infrastruktur kritis nasional secara real-time.
+        </p>
+</div>
+</div>
+<!-- Trusted Enterprise Ticker Row -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="font-label-telemetry text-label-telemetry text-outline uppercase tracking-wider text-center">Dipercaya Di Sektor Kritis Nasional</span>
+<div class="flex items-center justify-around py-space-sm bg-surface-container-low rounded-lg px-space-sm">
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-on-surface-variant text-[22px]">account_balance</span>
+<span class="font-label-badge text-label-badge text-on-surface">Perbankan</span>
+</div>
+<div class="h-6 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-on-surface-variant text-[22px]">payments</span>
+<span class="font-label-badge text-label-badge text-on-surface">FinTech</span>
+</div>
+<div class="h-6 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-on-surface-variant text-[22px]">shopping_bag</span>
+<span class="font-label-badge text-label-badge text-on-surface">E-Commerce</span>
+</div>
+<div class="h-6 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-on-surface-variant text-[22px]">local_hospital</span>
+<span class="font-label-badge text-label-badge text-on-surface">Kesehatan</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Live Threat Map Simulator -->
+<section class="w-full bg-surface-container-lowest px-margin py-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-primary-container uppercase">Telemetri Serangan Masuk</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">Peta Radar Ancaman Web</h2>
+</div>
+<button class="px-space-sm py-1 bg-surface-container-high rounded text-on-surface text-label-telemetry font-label-telemetry flex items-center gap-1" id="toggle-filter">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span>FILTER</span>
+</button>
+</div>
+<!-- Telemetry Interactive Canvas Screen -->
+<div class="relative w-full h-56 bg-surface-container rounded-lg p-space-sm flex flex-col justify-between overflow-hidden shadow-inner">
+<!-- Grid graphic simulation -->
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(#4edea3_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<div class="relative z-10 flex items-center justify-between">
+<span class="font-label-telemetry text-label-telemetry text-secondary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary inline-block"></span> SENSOR WEB WAF: ONLINE
+        </span>
+<span class="font-label-telemetry text-label-telemetry text-outline">LATENSI: 4ms</span>
+</div>
+<!-- Live Target Log -->
+<div class="relative z-10 flex flex-col gap-1 font-label-telemetry text-label-telemetry" id="threat-logs">
+<div class="flex items-center justify-between bg-surface-container-lowest/80 px-2 py-1 rounded">
+<span class="text-error flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">block</span> SQLi Injeksi Dimatikan</span>
+<span class="text-outline">IP: 194.26.*** / 0.4s lalu</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest/80 px-2 py-1 rounded">
+<span class="text-error flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">shield</span> Layer 7 HTTP Flood Ditepis</span>
+<span class="text-outline">240 Gbps / 1.2s lalu</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest/80 px-2 py-1 rounded">
+<span class="text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">check_circle</span> Web Token Handshake Valid</span>
+<span class="text-outline">Gateway-JKT / 2s lalu</span>
+</div>
+</div>
+<div class="relative z-10 flex items-center justify-between pt-1">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">TARGET: /api/v1/auth &amp; /payment-gate</span>
+<span class="font-label-telemetry text-label-telemetry text-primary-container uppercase font-bold">STATUS: 100% AMAN</span>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="w-full px-margin py-space-xl flex flex-col gap-space-lg bg-surface">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-telemetry text-label-telemetry text-secondary uppercase font-semibold">Profil Intelijen Siber</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">PT CyberSecurity Indonesia</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Didirikan oleh para praktisi pertahanan siber elit, kami bermitra dengan korporasi finansial, BUMN, dan unicorn teknologi untuk membangun perimeter digital tanpa celah.
+      </p>
+</div>
+<!-- Team Photo & Cert Badge -->
+<div class="relative w-full rounded-xl overflow-hidden bg-surface-container shadow-lg">
+<div class="relative w-full h-52">
+<img class="w-full h-full object-cover grayscale contrast-150" data-alt="Black and white high-contrast documentary corporate photograph of elite cybersecurity consultants and ethical hackers around an office table analyzing security vulnerability data code on modern laptops in a sleek dark meeting room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW74S-CaGw-VO_DU6M8q7EP0UB8G6PVbijWh0BUgeud6QaviKut3vLKzuBwNVKHi5zHaXMBThYphknahtKaE8vfA6vHyUSxA9Ypz58MoyzvmG7Sz4fR-zVk6NzfFM1ZajLyuL-nx5H11YrKuIaMuZAyQTChgrd9AytqfwhOXsM2R8o7g5AOed7fIqlJp8oYSAIK963WQdY2N20i0oIsb0tkvYNuFT8q9HnnXXklA5z"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">workspace_premium</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">OSCP &amp; CREST Certified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Seluruh auditor ethical hacker kami mengantongi sertifikasi internasional berstandar industri tertinggi untuk pengujian penetrasi web mendalam.
+        </p>
+</div>
+</div>
+<!-- 3 Core Pillars -->
+<div class="flex flex-col gap-space-sm">
+<!-- Pillar 1 -->
+<div class="p-space-md bg-surface-container rounded-lg flex items-start gap-space-md">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container text-[22px]">crisis_alert</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Offensive Security Teruji</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Simulasi serangan realistis berbasis metodologi OWASP Top 10 dan MITRE ATT&amp;CK untuk mengekspos celah sebelum dieksploitasi musuh.
+          </p>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="p-space-md bg-surface-container rounded-lg flex items-start gap-space-md">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[22px]">nest_clock_farsight_analog</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Pusat SOC Siaga 24/7</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Pusat operasi pertahanan berteknologi SIEM/SOAR mutakhir dengan SLA respons insiden kritis di bawah lima menit tanpa jeda libur.
+          </p>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="p-space-md bg-surface-container rounded-lg flex items-start gap-space-md">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[22px]">policy</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Kepatuhan Regulasi UU PDP</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Penyesuaian tata kelola keamanan informasi sesuai standar kepatuhan BSSN, ISO/IEC 27001, serta UU Perlindungan Data Pribadi RI.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive ROI & Severity Calculator Module -->
+<section class="w-full bg-surface-container-lowest px-margin py-space-xl flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-telemetry text-label-telemetry text-primary-container uppercase font-semibold">Kalkulator Tingkat Resiko Web</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">Estimasi Kerentanan Aplikasi Anda</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Pilih karakteristik arsitektur web Anda untuk melihat profil eksposur ancaman instan:
+      </p>
+</div>
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-telemetry text-label-telemetry text-on-surface font-medium">Jenis Aplikasi Web:</label>
+<div class="grid grid-cols-2 gap-space-xs" id="app-type-selector">
+<button class="calc-btn px-space-sm py-2 bg-primary-container text-on-primary-container rounded font-label-telemetry text-label-telemetry font-bold text-center active:scale-95" data-risk="high" type="button">Fintech / Transaksi</button>
+<button class="calc-btn px-space-sm py-2 bg-surface-container-high text-on-surface rounded font-label-telemetry text-label-telemetry font-bold text-center active:scale-95" data-risk="med" type="button">Portal SaaS / API</button>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-telemetry text-label-telemetry text-on-surface font-medium">Volume Trafik Bulanan:</label>
+<div class="grid grid-cols-2 gap-space-xs" id="traffic-selector">
+<button class="vol-btn px-space-sm py-2 bg-primary-container text-on-primary-container rounded font-label-telemetry text-label-telemetry font-bold text-center active:scale-95" data-vol="large" type="button">&gt; 1 Juta Kunjungan</button>
+<button class="vol-btn px-space-sm py-2 bg-surface-container-high text-on-surface rounded font-label-telemetry text-label-telemetry font-bold text-center active:scale-95" data-vol="normal" type="button">&lt; 1 Juta Kunjungan</button>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-outline">ESTIMASI RISIKO:</span>
+<span class="font-headline-sm text-headline-sm text-error font-extrabold" id="risk-score-display">KRITIS (Level 4/5)</span>
+</div>
+<div class="text-right flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-outline">REKOMENDASI:</span>
+<span class="font-label-badge text-label-badge text-secondary font-bold" id="risk-rec-display">WAPT + CLOUD WAF</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="w-full px-margin py-space-xl flex flex-col gap-space-lg bg-surface">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-telemetry text-label-telemetry text-secondary uppercase font-semibold">Solusi Pertahanan Komprehensif</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">6 Layanan Keamanan Utama</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Layanan terintegrasi yang dirancang untuk mencegah eksploitasi sebelum terjadi kerugian finansial dan reputasi.
+      </p>
+</div>
+<!-- 6 Mobile Services Cards -->
+<div class="flex flex-col gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container text-[22px]">bug_report</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-primary-container font-semibold px-2 py-0.5 bg-surface-container-highest rounded">OFFENSIVE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">WAPT (Web App Penetration Testing)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Penyelidikan mendalam simulasi blackbox/greybox hacking untuk menemukan celah SQLi, XSS, CSRF, IDOR, dan broken authentication.
+        </p>
+<div class="flex items-center gap-space-xs text-primary-container font-label-telemetry text-label-telemetry font-bold pt-1">
+<span>LAPORAN CVSS DETAIL</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[22px]">security</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-secondary font-semibold px-2 py-0.5 bg-surface-container-highest rounded">PREVENTION</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Managed Cloud WAF</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Penyaring lalu lintas web canggih berbasis AI di edge network, memblokir bot jahat dan payload berbahaya tanpa menambah latensi.
+        </p>
+<div class="flex items-center gap-space-xs text-secondary font-label-telemetry text-label-telemetry font-bold pt-1">
+<span>ZERO-DAY RULESET</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[22px]">storm</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-primary font-semibold px-2 py-0.5 bg-surface-container-highest rounded">INFRASTRUCTURE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Anti-DDoS Multi-Tbps</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Mitigasi otomatis volumetrik Layer 3, 4, dan Layer 7 berkapasitas scrubbing global hingga puluhan Terabit per detik untuk menjaga uptime 100%.
+        </p>
+<div class="flex items-center gap-space-xs text-primary font-label-telemetry text-label-telemetry font-bold pt-1">
+<span>UPTIME GUARANTEED</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface text-[22px]">assignment_turned_in</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-on-surface font-semibold px-2 py-0.5 bg-surface-container-highest rounded">COMPLIANCE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Audit ISO 27001 &amp; UU PDP</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Penilaian kepatuhan menyeluruh, gap analysis, dan penyusunan tata kelola keamanan data agar lolos sertifikasi audit regulasi Indonesia.
+        </p>
+<div class="flex items-center gap-space-xs text-on-surface font-label-telemetry text-label-telemetry font-bold pt-1">
+<span>KONSULTASI AUDITOR RESMI</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container text-[22px]">code_blocks</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-primary-container font-semibold px-2 py-0.5 bg-surface-container-highest rounded">DEVSECOPS</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Secure Code Review (SAST/DAST)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Audit baris kode sumber aplikasi web (source code analysis) untuk menemukan kerentanan logika bisnis sebelum tahap rilis ke server produksi.
+        </p>
+<div class="flex items-center gap-space-xs text-primary-container font-label-telemetry text-label-telemetry font-bold pt-1">
+<span>INTEGRASI CI/CD PIPELINE</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-error text-[22px]">emergency_heat</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-error font-semibold px-2 py-0.5 bg-surface-container-highest rounded">CSIRT</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Forensik Digital &amp; Tanggap Darurat</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Tim tanggap darurat saat insiden kebocoran atau peretasan terjadi: lokalisasi malware, pemulihan integritas sistem, dan investigasi bukti digital legal.
+        </p>
+<div class="flex items-center gap-space-xs text-error font-label-telemetry text-label-telemetry font-bold pt-1">
+<span>TIM SIAGA 1-JAM DISPATCH</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- News / Research Insights Section -->
+<section class="w-full bg-surface-container-lowest px-margin py-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-telemetry text-label-telemetry text-primary-container uppercase font-semibold">Publikasi Riset &amp; Intelijen</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">Wawasan Keamanan Terkini</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Analisis mendalam dari lab laboratorium ancaman siber Sentinel CyberSecurity Indonesia.
+      </p>
+</div>
+<!-- 3 Vertical Article Cards -->
+<div class="flex flex-col gap-space-md">
+<!-- Article 1 -->
+<article class="bg-surface-container rounded-lg overflow-hidden flex flex-col">
+<div class="h-40 w-full relative">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Technical security visual showing a laptop screen with highlighted code snippets in dark theme, surrounded by abstract cyber defense network graph overlays in pure black and white styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4Vxy2F0ljPdtUogtF4yZJHCyZHsl7II0xrRlqb0lmlKl7OduNkH4GwcEwnaHswWOC2XykSeodc16R9JYLFQOcS_SR5vPYo2c6_j0_kIke2gDRtUKQj5QrmvsNbQPoZvo2cMea5zD-dXwUa_X66_YqChGBbEOtxO5wWN7MWnbeDPmqrCcteLPBVW7_IpfcqE1Wlkiz1m4o7SLa_NUSKqNne_JBEUNGJSkawHGaUn2z"/>
+<span class="absolute top-2 left-2 bg-surface-container-highest px-2 py-0.5 rounded text-label-telemetry font-label-telemetry text-primary-container font-semibold">ANALISIS ZERO-DAY</span>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<span class="font-label-telemetry text-label-telemetry text-outline">12 MEI 2025 // OLEH THREAT-LABS</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">
+            Anatomi Eksploitasi Otentikasi API Modern pada Aplikasi Perbankan Terbuka
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            Bagaimana aktor ancaman memanfaatkan celah Broken Object Level Authorization (BOLA) dan metode pertahanan WAF terukur.
+          </p>
+<a class="inline-flex items-center gap-1 font-label-telemetry text-label-telemetry text-primary-container font-bold pt-space-xs" href="#">
+<span>BACA SELENGKAPNYA</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article 2 -->
+<article class="bg-surface-container rounded-lg overflow-hidden flex flex-col">
+<div class="h-40 w-full relative">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Digital server infrastructure racks in a dark data center illuminated by subtle white and grey telemetry status indicator lights, clean monochrome enterprise aesthetics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcpKIbRTEHgOdIrKix2Vjii8jV87zwbAGfK17wJ2ibW2F1AlwPa6V9PzGxK79WVh5uF-RX1fTaidFsA8qzhWVNNwwos-nqXPrtvwrfyt0vWKfwcj8pY1AVlSxOA76SehbWpFBm3IGBSy4jpGRUjjqhvlMo_flrA8XdLVNUF8V3PEE65MjxqAsKgHIoMlyXC5YhS-OOZOZMoyoPzuzGwySLeXMTU0OWMx4wHnXNqtNb"/>
+<span class="absolute top-2 left-2 bg-surface-container-highest px-2 py-0.5 rounded text-label-telemetry font-label-telemetry text-secondary font-semibold">REGULASI UU PDP</span>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<span class="font-label-telemetry text-label-telemetry text-outline">28 APRIL 2025 // LEGAL-TECH ID</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">
+            Kepatuhan Keamanan Web Wajib bagi Pengelola Data Pribadi di Indonesia
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            Panduan teknis bagi CISO dan tim engineering dalam memenuhi standar enkripsi data at-rest serta transit sesuai ketentuan BSSN.
+          </p>
+<a class="inline-flex items-center gap-1 font-label-telemetry text-label-telemetry text-secondary font-bold pt-space-xs" href="#">
+<span>BACA SELENGKAPNYA</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article 3 -->
+<article class="bg-surface-container rounded-lg overflow-hidden flex flex-col">
+<div class="h-40 w-full relative">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Abstract monochrome visual representation of encrypted data packets moving through a protective digital firewall shield matrix in sharp high contrast black and grey tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUEpr_FBbQU6yrUEdOg4GucW6aRuDGQzToqcACFWHS7ayHqGnmVY0pWjiAj3ae3P-uLytG6TqfzrOYYYAhqRXuWxiek3-uKQ8GW5UWCxHv70Fr9RTPAQxEXyhUJRUutENwfv3JCgemp4DPCL1OUID_QEkD6prRWsc1czhCnjd5vRveVkJSrm-v19G3Ab3Nry2JWlpdRAr_INn7V4VMZSlRFVnEHw7EEQetWWL0S3nf"/>
+<span class="absolute top-2 left-2 bg-surface-container-highest px-2 py-0.5 rounded text-label-telemetry font-label-telemetry text-primary font-semibold">MITIGASI DDOS</span>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<span class="font-label-telemetry text-label-telemetry text-outline">15 APRIL 2025 // CSIRT-TACTICAL</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">
+            Tren Serangan DDoS Terdistribusi Layer 7 pada Event Promo E-Commerce 2025
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            Pola serangan botnet mutakhir yang menargetkan checkout database dan strategi mitigasi rate limiting presisi.
+          </p>
+<a class="inline-flex items-center gap-1 font-label-telemetry text-label-telemetry text-primary font-bold pt-space-xs" href="#">
+<span>BACA SELENGKAPNYA</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+<button class="w-full h-12 flex items-center justify-center gap-space-xs bg-surface-container text-on-surface font-label-telemetry text-label-telemetry font-bold rounded-lg active:scale-95 transition-all" type="button">
+<span>LIHAT SEMUA ARTIKEL &amp; RISET</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</section>
+<!-- Interactive FAQ Accordion -->
+<section class="w-full px-margin py-space-xl flex flex-col gap-space-md bg-surface">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-telemetry text-label-telemetry text-primary-container uppercase font-semibold">Informasi Layanan</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">Pertanyaan yang Sering Diajukan</h2>
+</div>
+<div class="flex flex-col gap-space-xs" id="faq-list">
+<!-- FAQ 1 -->
+<div class="faq-item bg-surface-container rounded-lg overflow-hidden">
+<button class="faq-toggle w-full p-space-md text-left flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-semibold" type="button">
+<span>Berapa lama proses audit WAPT web berjalan?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md text-body-sm font-body-sm text-on-surface-variant">
+          Untuk aplikasi web standar, proses audit penetrasi membutuhkan 5 hingga 10 hari kerja mencakup pengujian menyeluruh, verifikasi ulang, dan penyusunan laporan rekomendasi remedi eksekutif serta teknis.
+        </div>
+</div>
+<!-- FAQ 2 -->
+<div class="faq-item bg-surface-container rounded-lg overflow-hidden">
+<button class="faq-toggle w-full p-space-md text-left flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-semibold" type="button">
+<span>Apakah audit akan mengganggu operasional sistem kami?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md text-body-sm font-body-sm text-on-surface-variant">
+          Tidak. Kami menjadwalkan payload pengujian non-destruktif dan dapat mengeksekusi pengujian di lingkungan staging atau saat jam traffic terendah dengan koordinasi ketat bersama tim DevOps Anda.
+        </div>
+</div>
+<!-- FAQ 3 -->
+<div class="faq-item bg-surface-container rounded-lg overflow-hidden">
+<button class="faq-toggle w-full p-space-md text-left flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-semibold" type="button">
+<span>Apakah laporan audit diakui oleh auditor eksternal?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md text-body-sm font-body-sm text-on-surface-variant">
+          Ya. Laporan kami mematuhi standar ISO 27001, OJK, BSSN, dan PCI-DSS dengan tandatangan sertifikasi resmi ethical hacker terakreditasi CREST / OSCP.
+        </div>
+</div>
+</div>
+</section>
+<!-- Contact & Emergency Section -->
+<section class="w-full bg-surface-container-lowest px-margin py-space-xl flex flex-col gap-space-lg" id="audit-form">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="font-label-telemetry text-label-telemetry text-error uppercase font-bold">Siaga Cepat 24/7/365</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">Hubungi Tim Komando Siber</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Mulai konsultasi evaluasi risiko aplikasi Anda atau hubungi nomor darurat kami untuk penanganan insiden aktif.
+      </p>
+</div>
+<!-- Quick Emergency Contact Buttons -->
+<div class="grid grid-cols-2 gap-space-sm">
+<a class="p-space-md bg-surface-container rounded-lg flex flex-col gap-space-xs active:bg-surface-container-high transition-colors" href="https://wa.me/6281198765432">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-secondary text-[24px]">chat</span>
+<span class="font-label-telemetry text-label-telemetry text-secondary font-bold">AKTIF</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">WhatsApp SOC</span>
+<span class="font-label-telemetry text-label-telemetry text-outline">+62 811-9876-5432</span>
+</a>
+<a class="p-space-md bg-surface-container rounded-lg flex flex-col gap-space-xs active:bg-surface-container-high transition-colors" href="tel:+622150820900">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary-container text-[24px]">call</span>
+<span class="font-label-telemetry text-label-telemetry text-primary-container font-bold">HOTLINE</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Telepon Darurat</span>
+<span class="font-label-telemetry text-label-telemetry text-outline">(021) 5082-0900</span>
+</a>
+</div>
+<!-- Map Box Preview Kuningan Jakarta -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-telemetry text-label-telemetry text-outline uppercase">Markas Operasional</span>
+<span class="font-label-telemetry text-label-telemetry text-secondary">Cyber 2 Tower Lt. 18</span>
+</div>
+<div class="w-full h-44 rounded-lg bg-surface-container shadow-inner flex flex-col justify-end p-space-sm relative overflow-hidden" data-location="Cyber 2 Tower, HR Rasuna Said, Jakarta Selatan, Indonesia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBomTzNc57fcH4f1O6c1FodPRP8-7_Mn8t1jlzZJJ4_ZnQLwsBu_e8iem-qs6Aruiz-CshXFzBwECsnksm7rtRLSknFGuxcbdZigZNDusdJ3AAILCkmIr9FGeDbob4xoAFsQiZJtbx8aJfPyqu71BC4VMUdpkSRaQIytN0gdqduRPLx0qPGv1HZ6DGe5WoHrk30VbYv20UFN_XKBrL7dSkpI3VX8f5reuu-HPTTWd82')">
+<div class="absolute inset-0 bg-surface-container-lowest/60 backdrop-blur-[2px]"></div>
+<div class="relative z-10 flex items-center justify-between bg-surface-container-highest/90 p-space-sm rounded">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[20px]">location_on</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface text-xs font-bold">Cyber 2 Tower, Kuningan</span>
+<span class="font-label-telemetry text-label-telemetry text-outline">Jakarta Selatan, DKI Jakarta 12950</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">directions</span>
+</div>
+</div>
+</div>
+<!-- Mobile-Optimized Contact Form -->
+<form class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-md shadow-md" id="contact-form" onsubmit="event.preventDefault(); document.getElementById('form-feedback').classList.remove('hidden'); this.reset();">
+<div class="flex flex-col gap-1">
+<label class="font-label-telemetry text-label-telemetry text-on-surface font-semibold flex items-center justify-between" for="full-name">
+<span>NAMA LENGKAP</span>
+<span class="text-error">*</span>
+</label>
+<input class="h-11 px-space-sm bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded focus:outline-none focus:bg-surface-container-high transition-all" id="full-name" placeholder="cth. Rama Danaputra" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-telemetry text-label-telemetry text-on-surface font-semibold flex items-center justify-between" for="work-email">
+<span>EMAIL PERUSAHAAN</span>
+<span class="text-error">*</span>
+</label>
+<input class="h-11 px-space-sm bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded focus:outline-none focus:bg-surface-container-high transition-all" id="work-email" placeholder="rama@korporasi.co.id" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-telemetry text-label-telemetry text-on-surface font-semibold" for="service-choice">
+          PILIHAN LAYANAN KEAMANAN
+        </label>
+<select class="h-11 px-space-sm bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded focus:outline-none focus:bg-surface-container-high transition-all" id="service-choice">
+<option value="wapt">Web Application Penetration Testing (WAPT)</option>
+<option value="waf">Managed Cloud WAF &amp; Bot Protection</option>
+<option value="ddos">Mitigasi Anti-DDoS Multi-Tbps</option>
+<option value="compliance">Audit Regulasi ISO 27001 &amp; UU PDP</option>
+<option value="code">DevSecOps &amp; Secure Code Review</option>
+<option value="incident">Insiden Aktif (Tanggap Darurat Segera)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-telemetry text-label-telemetry text-on-surface font-semibold flex items-center justify-between" for="message-content">
+<span>DESKRIPSI KEBUTUHAN / TARGET SISTEM</span>
+<span class="text-outline">Opsional</span>
+</label>
+<textarea class="p-space-sm bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded focus:outline-none focus:bg-surface-container-high transition-all resize-none" id="message-content" placeholder="Jelaskan kebutuhan audit domain web, estimasi timeline, atau insiden yang sedang dialami..." rows="3"></textarea>
+</div>
+<button class="w-full h-12 flex items-center justify-center gap-space-xs bg-primary-container text-on-primary-container font-headline-sm text-headline-sm rounded-lg active:scale-95 transition-all shadow-md" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span class="text-sm font-bold tracking-wide">Kirim Permohonan Audit</span>
+</button>
+<!-- Feedback Banner -->
+<div class="hidden p-space-sm bg-surface-container-highest rounded text-secondary font-label-telemetry text-label-telemetry flex items-center gap-space-xs" id="form-feedback">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Permohonan terenkripsi terkirim. Petugas SOC kami akan menghubungi Anda dalam 15 menit.</span>
+</div>
+</form>
+</section>
+</div>
+<script>
+  // Dynamic Risk Calculator Micro-interaction
+  (function initRiskCalc() {
+    const calcBtns = document.querySelectorAll('.calc-btn');
+    const volBtns = document.querySelectorAll('.vol-btn');
+    const scoreDisplay = document.getElementById('risk-score-display');
+    const recDisplay = document.getElementById('risk-rec-display');
+
+    let currentRisk = 'high';
+    let currentVol = 'large';
+
+    function updateRiskAssessment() {
+      if (currentRisk === 'high' && currentVol === 'large') {
+        scoreDisplay.textContent = 'KRITIS (Level 5/5)';
+        scoreDisplay.className = 'font-headline-sm text-headline-sm text-error font-extrabold';
+        recDisplay.textContent = 'WAPT + CLOUD WAF + DDOS';
+      } else if (currentRisk === 'high' || currentVol === 'large') {
+        scoreDisplay.textContent = 'TINGGI (Level 4/5)';
+        scoreDisplay.className = 'font-headline-sm text-headline-sm text-error font-extrabold';
+        recDisplay.textContent = 'WAPT + CLOUD WAF';
+      } else {
+        scoreDisplay.textContent = 'MODERAT (Level 2/5)';
+        scoreDisplay.className = 'font-headline-sm text-headline-sm text-secondary font-extrabold';
+        recDisplay.textContent = 'PERIODIC WEB PENTEST';
+      }
+    }
+
+    calcBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        calcBtns.forEach(b => {
+          b.className = 'calc-btn px-space-sm py-2 bg-surface-container-high text-on-surface rounded font-label-telemetry text-label-telemetry font-bold text-center active:scale-95';
+        });
+        btn.className = 'calc-btn px-space-sm py-2 bg-primary-container text-on-primary-container rounded font-label-telemetry text-label-telemetry font-bold text-center active:scale-95';
+        currentRisk = btn.dataset.risk;
+        updateRiskAssessment();
+      });
+    });
+
+    volBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        volBtns.forEach(b => {
+          b.className = 'vol-btn px-space-sm py-2 bg-surface-container-high text-on-surface rounded font-label-telemetry text-label-telemetry font-bold text-center active:scale-95';
+        });
+        btn.className = 'vol-btn px-space-sm py-2 bg-primary-container text-on-primary-container rounded font-label-telemetry text-label-telemetry font-bold text-center active:scale-95';
+        currentVol = btn.dataset.vol;
+        updateRiskAssessment();
+      });
+    });
+  })();
+
+  // Accordion Logic
+  document.querySelectorAll('.faq-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const isHidden = content.classList.contains('hidden');
+      
+      // Close all
+      document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('.faq-toggle .material-symbols-outlined').forEach(i => i.classList.remove('rotate-180'));
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      }
+    });
+  });
+
+  // Telemetry stream generator animation
+  setInterval(() => {
+    const logs = document.getElementById('threat-logs');
+    if (!logs) return;
+    const ips = ['182.253.***', '103.144.***', '36.88.***', '140.213.***'];
+    const threats = [
+      { text: 'XSS Reflected Diblokir', type: 'error', icon: 'block' },
+      { text: 'Credential Stuffing Ditangkal', type: 'error', icon: 'shield' },
+      { text: 'SSL/TLS Handshake Terverifikasi', type: 'secondary', icon: 'check_circle' },
+      { text: 'Directory Traversal Digagalkan', type: 'error', icon: 'block' }
+    ];
+    const pickedThreat = threats[Math.floor(Math.random() * threats.length)];
+    const pickedIp = ips[Math.floor(Math.random() * ips.length)];
+
+    const item = document.createElement('div');
+    item.className = 'flex items-center justify-between bg-surface-container-lowest/80 px-2 py-1 rounded transition-opacity';
+    item.innerHTML = `
+      <span class="text-${pickedThreat.type} flex items-center gap-1">
+        <span class="material-symbols-outlined text-[12px]">${pickedThreat.icon}</span> ${pickedThreat.text}
+      </span>
+      <span class="text-outline">IP: ${pickedIp} / baru saja</span>
+    `;
+
+    if (logs.children.length >= 3) {
+      logs.removeChild(logs.lastElementChild);
+    }
+    logs.insertBefore(item, logs.firstChild);
+  }, 4500);
+</script><footer class="w-full bg-surface-container-lowest pt-space-xl pb-24 px-margin mt-auto shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-headline-sm text-headline-sm text-primary">Sentinel Defense ID</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Sistem Pertahanan Keamanan Siber Nasional Berstandar Militer untuk Infrastruktur Kritis Indonesia.</p></div><div class="flex flex-wrap items-center gap-space-sm py-space-sm"><div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high rounded"><span class="material-symbols-outlined text-secondary text-[16px]">verified_user</span><span class="font-label-telemetry text-label-telemetry text-on-surface">ISO/IEC 27001</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high rounded"><span class="material-symbols-outlined text-secondary text-[16px]">verified</span><span class="font-label-telemetry text-label-telemetry text-on-surface">SOC 2 TYPE II</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high rounded"><span class="material-symbols-outlined text-secondary text-[16px]">lock</span><span class="font-label-telemetry text-label-telemetry text-on-surface">BSSN COMPLIANT</span></div></div><div class="grid grid-cols-2 gap-space-md py-space-sm"><div class="flex flex-col gap-space-xs"><span class="font-label-telemetry text-label-telemetry text-outline uppercase">Navigasi Cepat</span><a class="font-body-sm text-body-sm text-on-surface hover:text-primary transition-colors py-1" href="#">Pusat SOC</a><a class="font-body-sm text-body-sm text-on-surface hover:text-primary transition-colors py-1" href="#">Intelijen Ancaman</a><a class="font-body-sm text-body-sm text-on-surface hover:text-primary transition-colors py-1" href="#">Audit &amp; Kepatuhan</a><a class="font-body-sm text-body-sm text-on-surface hover:text-primary transition-colors py-1" href="#">Mitigasi DDoS</a></div><div class="flex flex-col gap-space-xs"><span class="font-label-telemetry text-label-telemetry text-outline uppercase">Tautan Resmi</span><a class="font-body-sm text-body-sm text-on-surface hover:text-primary transition-colors py-1" href="#">Status Sistem</a><a class="font-body-sm text-body-sm text-on-surface hover:text-primary transition-colors py-1" href="#">Kebijakan Privasi</a><a class="font-body-sm text-body-sm text-on-surface hover:text-primary transition-colors py-1" href="#">Syarat &amp; Ketentuan</a><a class="font-body-sm text-body-sm text-on-surface hover:text-primary transition-colors py-1" href="#">Hubungi Tim Tanggap</a></div></div><div class="flex items-center justify-between pt-space-sm"><div class="flex items-center gap-space-md"><a aria-label="LinkedIn" class="w-11 h-11 flex items-center justify-center bg-surface-container rounded text-on-surface-variant hover:text-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">share</span></a><a aria-label="Terminal Network" class="w-11 h-11 flex items-center justify-center bg-surface-container rounded text-on-surface-variant hover:text-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">terminal</span></a><a aria-label="BSSN CSIRT Connect" class="w-11 h-11 flex items-center justify-center bg-surface-container rounded text-on-surface-variant hover:text-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">shield</span></a></div><span class="font-label-telemetry text-label-telemetry text-secondary uppercase">REG: ID-CSIRT-01</span></div><div class="pt-space-sm"><p class="font-label-telemetry text-label-telemetry text-outline">© 2025 PT Sentinel Pertahanan Siber Indonesia. Hak cipta dilindungi undang-undang. Jakarta, Indonesia.</p></div></div></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-space-sm"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] transition-colors text-primary-container font-semibold" data-path="beranda" href="#"><span class="material-symbols-outlined text-[22px]">shield</span><span class="font-label-badge text-label-badge">Beranda</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="intelijen-ancaman" href="#"><span class="material-symbols-outlined text-[22px]">radar</span><span class="font-label-badge text-label-badge">Ancaman</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="solusi-keamanan" href="#"><span class="material-symbols-outlined text-[22px]">security</span><span class="font-label-badge text-label-badge">Solusi</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="insiden-kontak" href="#"><span class="material-symbols-outlined text-[22px]">support_agent</span><span class="font-label-badge text-label-badge">Kontak</span></a></div></nav></body></html>

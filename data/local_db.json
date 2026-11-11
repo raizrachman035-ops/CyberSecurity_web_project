@@ -1,0 +1,87 @@
+{
+  "Roles": [
+    {
+      "id": "role-admin-01",
+      "name": "admin",
+      "description": "Administrator sistem dengan hak akses penuh",
+      "permissions": [
+        "all"
+      ],
+      "is_system": true,
+      "created_at": "2026-11-10T04:15:45.996Z"
+    },
+    {
+      "id": "role-user-02",
+      "name": "user",
+      "description": "Pengguna standar / klien untuk akses portal",
+      "permissions": [
+        "read",
+        "profile"
+      ],
+      "is_system": true,
+      "created_at": "2026-11-10T04:15:45.996Z"
+    }
+  ],
+  "Users": [
+    {
+      "id": "user-admin-001",
+      "name": "Super Administrator",
+      "email": "admin@gmail.com",
+      "password_hash": "$2a$10$EbtHgYU.q3zSIe5S3i7eTONxT22jeLH0cpPwPoJRMQkKUnIwBXbb6",
+      "role_id": "role-admin-01",
+      "status": "active",
+      "created_at": "2026-11-10T04:15:45.996Z",
+      "updated_at": "2026-11-10T04:15:45.996Z"
+    }
+  ],
+  "News": [
+    {
+      "id": "4",
+      "title": "indonesia sedang di serang",
+      "slug": "indonesia-sedang-di-serang-wbt9",
+      "excerpt": "indonesia sedang di hack",
+      "content": "jadi situasi indonesi sangat menghawatirkan karena kita serang diserang banyak hacker atau peretas internasional",
+      "thumbnail_path": "/images/soc-center.png",
+      "status": "published",
+      "author_id": "Super Administrator",
+      "created_at": "2026-11-10T07:20:29.772Z",
+      "updated_at": "2026-11-10T07:20:29.772Z"
+    },
+    {
+      "id": "3",
+      "title": "Tren Serangan Web Defacement dan API Vulnerabilities Terkini",
+      "slug": "tren-serangan-web-defacement-api-vulnerabilities",
+      "excerpt": "Kajian mendalam cara mencegah kebocoran API end-point modern akibat broken object level authorization (BOLA) dan miskonfigurasi gateway cloud.",
+      "content": "Dalam lanskap ancaman siber modern, kerentanan API telah menjadi vektor serangan utama. Pengujian penetrasi berkala (WAPT) dan validasi skema input adalah perlindungan lini pertama yang esensial untuk mencegah pengambilalihan data oleh penyerang asing.",
+      "thumbnail_path": "/images/soc-center.png",
+      "status": "published",
+      "author_id": "Super Administrator",
+      "created_at": "2026-11-07T04:15:45.996Z",
+      "updated_at": "2026-11-10T04:15:45.996Z"
+    },
+    {
+      "id": "2",
+      "title": "Strategi Mengamankan Aplikasi Web Menyambut Regulasi PDP",
+      "slug": "strategi-mengamankan-web-finansial-uu-pdp",
+      "excerpt": "Langkah wajib tim engineering dalam mengadopsi pseudonymization, enkripsi at-rest, dan protokol pelaporan insiden keamanan 3x24 jam.",
+      "content": "Kepatuhan terhadap UU Perlindungan Data Pribadi (UU PDP No. 27/2022) mengharuskan setiap platform yang mengelola data sensitif memiliki sistem audit jejak akses, enkripsi data at-rest dan in-transit, serta disaster recovery yang teruji.",
+      "thumbnail_path": "/images/team-collaboration.png",
+      "status": "published",
+      "author_id": "Super Administrator",
+      "created_at": "2026-11-03T04:15:45.996Z",
+      "updated_at": "2026-11-10T04:15:45.996Z"
+    },
+    {
+      "id": "1",
+      "title": "Mengapa WAF Tradisional Tidak Cukup Menghalau Serangan Bot Cerdas",
+      "slug": "mengapa-waf-tradisional-tidak-cukup-halau-ai-bots",
+      "excerpt": "Eksplorasi taktik bot bertenaga AI yang meniru perilaku navigasi manusia murni dan metode mitigasi berbasis behavioral fingerprinting real-time.",
+      "content": "Bot modern mampu memecahkan CAPTCHA statis dan merotasi IP secara dinamis. Solusi yang kami terapkan adalah machine learning heuristic filtering langsung di edge cloud untuk menganalisis anomali pola klik dan headers secara instan.",
+      "thumbnail_path": "/images/soc-center.png",
+      "status": "published",
+      "author_id": "Super Administrator",
+      "created_at": "2026-10-29T04:15:45.996Z",
+      "updated_at": "2026-11-10T04:15:45.996Z"
+    }
+  ]
+}
